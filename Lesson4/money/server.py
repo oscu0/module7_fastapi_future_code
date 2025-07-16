@@ -20,3 +20,12 @@ async def profile(request: Request):  # пользователь
         context={
             'request': request,
             'user': {'is_admin': True}})
+            
+
+@app.get("/users")      # определяем запрос GET для пути "/users"
+async def profile(request: Request):  # пользователи
+    return templates.TemplateResponse(
+        name='users.html',
+        context={
+            'request': request,
+            'items': ['Alisa', 'Bob']})
