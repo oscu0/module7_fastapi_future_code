@@ -1,5 +1,8 @@
+{% extends 'my_template.html' %}
+{% block content %}
 {% if user.is_admin %}
   <p>админ</p>
 {% else %}
   <p>обычный пользователь</p>
 {% endif %}
+{% endblock %}
